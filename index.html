@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Inote Series</title>
+    <script type="module" 
+    src="https://cdn.jsdelivr.net/npm/@ionic/core@4.7.4/dist/ionic/ionic.esm.js"></script>
+    <script nomodule 
+    src="https://cdn.jsdelivr.net/npm/@ionic/core@4.7.4/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@ionic/core@4.7.4/css/ionic.bundle.css"/>
+
+  </head>
+
+  <body>
+      <ion-app>
+            <ion-header>
+                <ion-toolbar color="light">
+                    <ion-text color="tertiary" size="large">
+                        <div class="ion-text-center">
+                            <h1>Tes séries préferées !!<h1>
+                        </div>
+                    </ion-text>
+                </ion-toolbar>
+            </ion-header>
+            <ion-content>
+                <ion-grid>
+                    <ion-row>
+                        <ion-col>
+                            <ion-card color="dark">
+                                <ion-card-content>
+                                    <img src="image/serie.jpg" alt="">
+                                        </ion-card-content>
+                                            </ion-card>
+                                                <ion-card padding="5" color="danger-tint">
+                                                <ion-label>BESTFLIX</ion-label>
+                                                <ion-card-header>Noter votre site</ion-card-header>
+                                        <ion-card-content>
+                                            Quelle est pour vous la meilleure série, tout genre confondu ? <br>
+                                            Vous pouvez en choisir plusieurs si le choix est trop difficile ;)
+                                    </ion-card-content>   
+                            </ion-card>
+                            
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+                <ion-item>
+                    <ion-label position="floating">Nom de la série</ion-label>
+                    <ion-input type="text" id="input-nom"></ion-input>
+                </ion-item>
+                <ion-item>   
+                    <ion-label position="floating">Score</ion-label>
+                        <ion-select id="select_number" interface="action-sheet">
+                            <ion-select-option value="1">1</ion-select-option>
+                            <ion-select-option value="2">2</ion-select-option>
+                            <ion-select-option value="3">3</ion-select-option>
+                            <ion-select-option value="4">4</ion-select-option>
+                            <ion-select-option value="5" selected>5</ion-select-option>
+                    </ion-select>      
+                </ion-item>
+
+                        <ion-list id="note_serie"></ion-list>
+
+                </ion-content>
+                
+                    <ion-button id="btn-add" size="large" margin fill="outline">
+                        Commencer a noter
+                    </ion-button>        
+
+    <ion-alert-controller></ion-alert-controller>
+
+    </ion-app>
+    <script src="app.js"></script>
+
+
+  </body>
+
+  </html>
